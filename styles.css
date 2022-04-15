@@ -96,6 +96,7 @@ img {
 
 .dice {
     display: inline-block;
+    margin: .2em;
     background: #be5a04;
     color: #1A1825;
     border: 1px solid #bc8a5e;

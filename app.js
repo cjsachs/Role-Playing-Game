@@ -8,7 +8,6 @@ const irelia = {
     health: 40,
     attack: 3,
     diceCount: 3,
-    currentDiceScore: []
 }
 
 const yasuo = {
@@ -19,18 +18,30 @@ const yasuo = {
     health: 30,
     attack: 4,
     diceCount: 4,
-    currentDiceScore: []
+}
+
+const getDiceRollArray = (diceCount) => {
+    return new Array(diceCount).fill(0).map(() => 
+        Math.floor(Math.random() * 6) + 1)
+}
+
+const getDiceHtml = (diceCount) => {
+    return getDiceRollArray(diceCount).map(function(num) {
+        return `<p class="dice">${num}</p>`
+    }).join('')
 }
 
 const renderCharacter = (data) => {
-    document.querySelector(`${data.elementId}`).innerHTML = `
-    <h2>${data.name}</h4>
-    <img src="${data.icon}" alt="${data.alt}">
+    const {elementId, name, icon, alt, health, attack, diceCount, diceRoll} = data
+    const diceHtml = getDiceHtml(diceCount)
+    document.querySelector(`${elementId}`).innerHTML = `
+    <h2>${name}</h4>
+    <img src="${icon}" alt="${alt}">
     <p class="health-bar">-</p>
-    <p class="subtext">Health: <span class="health-color">${data.health}</span></p>
-    <p class="subtext">Attack: <span class="attack-color">${data.attack}</span></p>
+    <p class="subtext">Health: <span class="health-color">${health}</span></p>
+    <p class="subtext">Attack: <span class="attack-color">${attack}</span></p>
     <section class="dice-section">
-        <p class="dice">${data.diceCount}</p>
+        ${diceHtml}
     </section>
     `
 }
