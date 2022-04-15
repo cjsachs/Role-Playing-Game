@@ -7,8 +7,11 @@ body {
     font-family: 'EB Garamond', serif;
     font-size: 2rem;
     color: white;
-    background: #1A1825;
-    padding: 0 1em;
+    background: url(./images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    padding: 3em 1em;
 }
 
 h2 {
@@ -64,6 +67,10 @@ img {
     margin-top: 2em;
 }
 
+.health-color, .attack-color {
+    font-weight: 700;
+}
+
 .health-color {
     color: #0a5b49;
 }
@@ -73,6 +80,7 @@ img {
 }
 
 .card {
+    background: #1a1825c3;
     width: 25%;
     margin: .5em 0;
     border: 1px solid #5a3a24;
@@ -97,22 +105,22 @@ img {
 }
 
 .btn {
-    margin: 0;
-    background: #042028;
+    background: #1a1825c3;
     font-size: 1.5rem;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.511);
     border: none;
+    border: 1px solid #776fa8;
     border-radius: 3px;
     cursor: pointer;
-    margin: 1em auto;
+    margin: auto 1.5em;
     padding: 1em 2em;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     transition: .3s;
 }
 
 .btn:focus, .btn:hover {
-    background: #073643;
+    background: #1A1825;
     color: #fff;
 }
 
