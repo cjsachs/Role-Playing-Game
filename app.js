@@ -4,6 +4,8 @@ import {getDiceRollArray} from "./utils.js"
 
 
 const attack = () => {
+    ireliaHtml.getDiceHtml()
+    yasuoHtml.getDiceHtml()
     render()
 }
 
