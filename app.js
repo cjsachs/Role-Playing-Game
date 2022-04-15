@@ -6,8 +6,8 @@ const ireliaHtml = new Character(characterData.ioniaChampions.irelia)
 const yasuoHtml = new Character(characterData.noxusChampions.yasuo)
 
 const render = () => {
-    document.querySelector(ireliaHtml.elementId).innerHTML = ireliaHtml.getCharacterHtml()
-    document.querySelector(yasuoHtml.elementId).innerHTML = yasuoHtml.getCharacterHtml()
+    document.querySelector('#ionia').innerHTML = ireliaHtml.getCharacterHtml()
+    document.querySelector('#noxus').innerHTML = yasuoHtml.getCharacterHtml()
 }
 
 render()

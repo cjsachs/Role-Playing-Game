@@ -1,7 +1,6 @@
 const characterData = {
     ioniaChampions: {
         irelia: {
-            elementId: '#ionia',
             name: 'Irelia',
             icon: 'images/irelia.jpg',
             alt: 'Irelia-Picture',
@@ -14,7 +13,6 @@ const characterData = {
 
     noxusChampions: {
         yasuo: {
-            elementId: '#noxus',
             name:'Yasuo',
             icon: './images/yasuo.webp',
             alt: 'Yasuo-Picture',
