@@ -3,4 +3,9 @@ const getDiceRollArray = (diceCount) => {
         Math.floor(Math.random() * 6) + 1)
 }
 
-export {getDiceRollArray}
+const getDicePlaceholderHtml = (diceCount) => {
+    return new Array(diceCount).fill(0).map(() => 
+    `<div class="placeholder-dice">-</div>`).join('')
+}
+
+export {getDiceRollArray, getDicePlaceholderHtml}
