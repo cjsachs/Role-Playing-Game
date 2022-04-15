@@ -1,7 +1,7 @@
 const characterData = {
-    blueSide: {
+    ioniaChampions: {
         irelia: {
-            elementId: '#redSide',
+            elementId: '#ionia',
             name: 'Irelia',
             icon: 'images/irelia.jpg',
             alt: 'Irelia-Picture',
@@ -12,9 +12,9 @@ const characterData = {
         }
     },
 
-    redSide: {
+    noxusChampions: {
         yasuo: {
-            elementId: '#blueSide',
+            elementId: '#noxus',
             name:'Yasuo',
             icon: './images/yasuo.webp',
             alt: 'Yasuo-Picture',
