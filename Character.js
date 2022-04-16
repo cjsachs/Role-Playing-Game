@@ -5,6 +5,18 @@ function Character(data) {
 
     this.diceArray = getDicePlaceholderHtml(this.diceCount)
 
+    this.takeDamage = (attackScoreArray) => {
+        const totalDamage = attackScoreArray.reduce(function(total, currentNum) {
+            return total + currentNum;
+        })
+        this.health -= totalDamage
+
+        if (this.health <= 0) {
+            this.health = 0;
+            this.isDead = true;
+        }
+    }
+
     this.getDiceHtml = () => {
         this.currentDiceScore = getDiceRollArray(this.diceCount)
         this.diceArray = this.currentDiceScore.map((num) => {
