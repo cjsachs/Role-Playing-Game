@@ -58,13 +58,24 @@ img {
     padding: .5em;
 }
 
-.health-bar {
-    width: 80%;
+.health-bar-inner, .health-bar-outer {
+    width: 90%;
+    border-radius: 2px;
+}
+
+.health-bar-outer {
+    background-color: #3f3f3f87;
+    margin-left: .5em;
+}
+
+.health-bar-inner {
     background-color: #0a5b49;
-    color: #0a5b49;
-    font-size: 5px;
-    margin-left: 4em;
-    margin-top: 2em;
+    height: 1vh;
+    margin-top: .5em;
+}
+
+.danger {
+    background: crimson;
 }
 
 .health-color, .attack-color {
@@ -85,6 +96,7 @@ img {
     margin: .5em 0;
     border: 1px solid #5a3a24;
     border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .dice-section {
@@ -130,6 +142,30 @@ img {
     color: #fff;
 }
 
+.end-game {
+    background: #1a1825c3;
+    padding: 1em 2.5em;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.end-game h2 {
+    color: #bc8a5e;
+}
+
+.end-game h3 {
+    padding: .5em;
+}
+
+.end-game h3, .end-game img {
+    border: 2px solid #5a3a24;
+    border-radius: 2px;
+}
+
+.end-game img {
+    padding: 1em;
+}
 
 
 @media(max-width: 800px) {

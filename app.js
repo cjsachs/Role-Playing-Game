@@ -18,9 +18,22 @@ const endGame = () => {
   const endMessage = ireliaHtml.health === 0 && yasuoHtml.health === 0 ?
     `Both champions dead` :
     ireliaHtml.health === 0 ?
-    `${ireliaHtml.name} is dead` :
-    `${yasuoHtml.name} is dead`
-  console.log(endMessage)
+    `Noxus Wins` :
+    `Ionia Wins`
+  
+  const endImage = ireliaHtml.health === 0 && yasuoHtml.health === 0 ?
+  './images/Tie-Game-Logo.png' :
+  ireliaHtml.health === 0 ?
+  './images/Noxus-Logo.webp' :
+  './images/Ionia-Logo.webp'
+
+  document.querySelector('.container').innerHTML = `
+    <div class="end-game">
+      <h2>Game Over</h2>
+      <h3>${endMessage}</h3>
+      <img src=${endImage}>
+    </div>
+  `
 }
 
 const render = () => {
