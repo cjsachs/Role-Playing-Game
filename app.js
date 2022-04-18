@@ -3,27 +3,27 @@ import Character from "./Character.js";
 import { getDiceRollArray } from "./utils.js";
 
 const attack = () => {
-  ireliaHtml.getDiceHtml();
-  yasuoHtml.getDiceHtml();
-  ireliaHtml.takeDamage(yasuoHtml.currentDiceScore);
-  yasuoHtml.takeDamage(ireliaHtml.currentDiceScore);
+  ioniaHtml.getDiceHtml();
+  noxusHtml.getDiceHtml();
+  ioniaHtml.takeDamage(noxusHtml.currentDiceScore);
+  noxusHtml.takeDamage(ioniaHtml.currentDiceScore);
   render();
 
-  if (ireliaHtml.isDead || yasuoHtml.isDead) {
+  if (ioniaHtml.isDead || noxusHtml.isDead) {
     endGame()
   }
 };
 
 const endGame = () => {
-  const endMessage = ireliaHtml.health === 0 && yasuoHtml.health === 0 ?
+  const endMessage = ioniaHtml.health === 0 && noxusHtml.health === 0 ?
     `Both champions dead` :
-    ireliaHtml.health === 0 ?
+    ioniaHtml.health === 0 ?
     `Noxus Wins` :
     `Ionia Wins`
   
-  const endImage = ireliaHtml.health === 0 && yasuoHtml.health === 0 ?
+  const endImage = ioniaHtml.health === 0 && noxusHtml.health === 0 ?
   './images/Tie-Game-Logo.png' :
-  ireliaHtml.health === 0 ?
+  ioniaHtml.health === 0 ?
   './images/Noxus-Logo.webp' :
   './images/Ionia-Logo.webp'
 
@@ -37,12 +37,12 @@ const endGame = () => {
 }
 
 const render = () => {
-  document.querySelector("#ionia").innerHTML = ireliaHtml.getCharacterHtml();
-  document.querySelector("#noxus").innerHTML = yasuoHtml.getCharacterHtml();
+  document.querySelector("#ionia").innerHTML = ioniaHtml.getCharacterHtml();
+  document.querySelector("#noxus").innerHTML = noxusHtml.getCharacterHtml();
 };
 
 document.querySelector(".btn").addEventListener("click", attack);
 
-const ireliaHtml = new Character(characterData.ioniaChampions.irelia);
-const yasuoHtml = new Character(characterData.noxusChampions.yasuo);
+const ioniaHtml = new Character(characterData.ioniaChampions.irelia);
+const noxusHtml = new Character(characterData.noxusChampions.darius);
 render();
