@@ -15,8 +15,8 @@ const getNewNoxusChampion = () => {
 }
 
 const attack = () => {
-  ioniaHtml.getDiceHtml();
-  noxusHtml.getDiceHtml();
+  ioniaHtml.setDiceHtml();
+  noxusHtml.setDiceHtml();
   ioniaHtml.takeDamage(noxusHtml.currentDiceScore);
   noxusHtml.takeDamage(ioniaHtml.currentDiceScore);
   render();
