@@ -4,16 +4,16 @@ const characterData = {
             name: 'Irelia',
             icon: './images/Ionia Champions/irelia.jpg',
             alt: 'Irelia-Picture',
-            health: 40,
-            attack: 3,
-            diceCount: 3,
+            health: 60,
+            attack: 4,
+            diceCount: 4,
             currentDiceScore: []
         },
         masterYi: {
             name:'Master Yi',
             icon: './images/Ionia Champions/MasterYi.webp',
             alt: 'Master-Yi-Picture',
-            health: 25,
+            health: 40,
             attack: 5,
             diceCount: 5,
             currentDiceScore: []
@@ -22,7 +22,7 @@ const characterData = {
             name:'Yasuo',
             icon: './images/Ionia Champions/yasuo.webp',
             alt: 'Yasuo-Picture',
-            health: 30,
+            health: 45,
             attack: 4,
             diceCount: 4,
             currentDiceScore: []
@@ -31,7 +31,7 @@ const characterData = {
             name:'Jhin',
             icon: './images/Ionia Champions/Jhin.jpg',
             alt: 'Jhin-Picture',
-            health: 20,
+            health: 30,
             attack: 6,
             diceCount: 6,
             currentDiceScore: []
@@ -40,7 +40,7 @@ const characterData = {
             name:'Karma',
             icon: './images/Ionia Champions/karma.webp',
             alt: 'Karma-Picture',
-            health: 35,
+            health: 50,
             attack: 2,
             diceCount: 2,
             currentDiceScore: []
@@ -52,16 +52,16 @@ const characterData = {
             name:'Darius',
             icon: './images/Noxus Champions/darius.webp',
             alt: 'Darius-Picture',
-            health: 40,
-            attack: 4,
-            diceCount: 4,
+            health: 75,
+            attack: 3,
+            diceCount: 3,
             currentDiceScore: []
         },
         talon: {
             name:'Talon',
             icon: './images/Noxus Champions/talon.jpg',
             alt: 'Talon-Picture',
-            health: 30,
+            health: 45,
             attack: 4,
             diceCount: 4,
             currentDiceScore: []
@@ -70,16 +70,16 @@ const characterData = {
             name:'Katarina',
             icon: './images/Noxus Champions/kat.jpg',
             alt: 'Katarina-Picture',
-            health: 30,
-            attack: 4,
-            diceCount: 4,
+            health: 40,
+            attack: 5,
+            diceCount: 5,
             currentDiceScore: []
         },
         draven: {
             name:'Draven',
             icon: './images/Noxus Champions/draven.webp',
             alt: 'Draven-Picture',
-            health: 20,
+            health: 30,
             attack: 6,
             diceCount: 6,
             currentDiceScore: []
@@ -88,7 +88,7 @@ const characterData = {
             name:'Rell',
             icon: './images/Noxus Champions/rell.jpg',
             alt: 'Rell-Picture',
-            health: 50,
+            health: 90,
             attack: 1,
             diceCount: 1,
             currentDiceScore: []
