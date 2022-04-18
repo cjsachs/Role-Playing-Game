@@ -22,18 +22,26 @@ const attack = () => {
   render();
 
   if (ioniaHtml.isDead) {
+    battleBtn.disabled = true;
     if (ioniaChampionsArr.length > 0) {
       ioniaHtml = getNewIoniaChampion()
-      render()
+      setTimeout(() => {
+        battleBtn.disabled = false;
+        render()
+      }, 1000)
     } else {
       endGame()
     }
   }
 
   if (noxusHtml.isDead) {
+    battleBtn.disabled = true;
     if (noxusChampionsArr.length > 0) {
       noxusHtml = getNewNoxusChampion()
-      render()
+      setTimeout(() => {
+        battleBtn.disabled = false;
+        render()
+      }, 1000)
     } else {
       endGame()
     }
@@ -71,7 +79,8 @@ const render = () => {
   document.querySelector("#noxus").innerHTML = noxusHtml.getCharacterHtml();
 };
 
-document.querySelector(".btn").addEventListener("click", attack);
+const battleBtn = document.querySelector('.btn')
+battleBtn.addEventListener("click", attack);
 
 let ioniaHtml = getNewIoniaChampion();
 let noxusHtml = getNewNoxusChampion();
