@@ -11,7 +11,7 @@ const characterData = {
         },
         masterYi: {
             name:'Master Yi',
-            icon: './images/Ionia Champions/masteryi.jpg',
+            icon: './images/Ionia Champions/MasterYi.webp',
             alt: 'Master-Yi-Picture',
             health: 25,
             attack: 5,
@@ -20,7 +20,7 @@ const characterData = {
         },
         yasuo: {
             name:'Yasuo',
-            icon: './images/yasuo.webp',
+            icon: './images/Ionia Champions/yasuo.webp',
             alt: 'Yasuo-Picture',
             health: 30,
             attack: 4,

@@ -1,6 +1,18 @@
 import characterData from "./data.js";
 import Character from "./Character.js";
-import { getDiceRollArray } from "./utils.js";
+
+let ioniaChampionsArr = ["irelia", "masterYi", "yasuo", "jhin", "karma"]
+let noxusChampionsArr = ["darius", "talon", "katarina", "draven", "rell"]
+
+const getNewIoniaChampion = () => {
+  const nextChampionData = characterData.ioniaChampions[ioniaChampionsArr.shift()]
+  return nextChampionData ? new Character(nextChampionData) : {}
+}
+
+const getNewNoxusChampion = () => {
+  const nextChampionData = characterData.noxusChampions[noxusChampionsArr.shift()]
+  return nextChampionData ? new Character(nextChampionData) : {}  
+}
 
 const attack = () => {
   ioniaHtml.getDiceHtml();
@@ -9,10 +21,28 @@ const attack = () => {
   noxusHtml.takeDamage(ioniaHtml.currentDiceScore);
   render();
 
-  if (ioniaHtml.isDead || noxusHtml.isDead) {
+  if (ioniaHtml.isDead) {
+    if (ioniaChampionsArr.length > 0) {
+      ioniaHtml = getNewIoniaChampion()
+      render()
+    } else {
+      endGame()
+    }
+  }
+
+  if (noxusHtml.isDead) {
+    if (noxusChampionsArr.length > 0) {
+      noxusHtml = getNewNoxusChampion()
+      render()
+    } else {
+      endGame()
+    }
+  }
+  
+  if (ioniaHtml.isDead && noxusHtml.isDead) {
     endGame()
   }
-};
+}
 
 const endGame = () => {
   const endMessage = ioniaHtml.health === 0 && noxusHtml.health === 0 ?
@@ -43,6 +73,7 @@ const render = () => {
 
 document.querySelector(".btn").addEventListener("click", attack);
 
-const ioniaHtml = new Character(characterData.ioniaChampions.irelia);
-const noxusHtml = new Character(characterData.noxusChampions.darius);
+let ioniaHtml = getNewIoniaChampion();
+let noxusHtml = getNewNoxusChampion();
+
 render();
